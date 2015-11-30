@@ -9,7 +9,7 @@
         <p>The <b>ng-init</b> directive initializes application data.</p>
         <p>The <b>ng-model</b> directive binds the value of HTML controls (input, select, textarea) to application data.</p>
 
-        <div ng-app="" ng-init="firstName='John'">
+        <div ng-init="firstName='John'">
             <p>Name: <input type="text" ng-model="firstName"></p>
             <p>You wrote: {{ firstName }}</p>
         </div>
@@ -19,7 +19,7 @@
         
         <h3>Data Binding</h3>
         <p>In the next example two text fields are binded with two ng-model directives:</p>
-        <div ng-app="" ng-init="quantity=0;price=0">
+        <div ng-init="quantity=0;price=0">
             Quantity: <input type="number"	ng-model="quantity">
             <br><br>
             Price per item:    <input type="number" ng-model="price">
@@ -32,7 +32,7 @@
         
         <h3>Repeating HTML Elements</h3>
         <p>The <b>ng-repeat</b> directive repeats an HTML element:</p>
-        <div ng-app="" ng-init="names=['Jani','Hege','Kai']">
+        <div ng-init="names=['Jani','Hege','Kai']">
           <ul>
             <li ng-repeat="x in names">
               {{ x }}
@@ -40,8 +40,8 @@
           </ul>
         </div>
         
-        <p>The ng-repeat directive used on an array of objects (JSON):</p>
-        <div ng-app="" ng-init="names2=[
+        <p>The <b>ng-repeat</b> directive used on an array of objects (JSON):</p>
+        <div ng-init="names2=[
             {name:'Jani',country:'Norway'},
             {name:'Hege',country:'Sweden'},
             {name:'Kai',country:'Denmark'}]">
