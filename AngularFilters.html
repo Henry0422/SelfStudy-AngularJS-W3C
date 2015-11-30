@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.2/angular.min.js"></script>
+    <body>
+        <h3>AngularJS Filters</h3>
+        <p>The <b>ng-controller</b> directive defines the application controller.</p>
+        <p>AngularJS will invoke the controller with a $scope object.</p>
+
+        
+        <div ng-controller="personCtrl">
+            <p>Lastname in uppercase is : {{ lastName | uppercase }}</p>
+        </div>
+        
+        
+        <div ng-app="myApp" ng-controller="costCtrl">
+            <input type="number" ng-model="quantity">
+            <input type="number" ng-model="price">
+
+            <p>Total = {{ (quantity * price) | currency }}</p>
+        </div>
+        
+        <script>
+            var app = angular.module('myApp', []);
+            app.controller('personCtrl', function($scope) {
+                $scope.firstName = "John";
+                $scope.lastName = "Doe";
+            });
+            
+            app.controller('costCtrl', function($scope){
+                $scope.quantity="0";
+                $scope.price="0";
+            });
+            
+        </script>
+    </body>
+</html>
