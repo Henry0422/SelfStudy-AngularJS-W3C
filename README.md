@@ -1,2 +1,2 @@
 # SelfStudy-AngularJS-W3C
-Learn more AngularJS from W3C
+Learning more AngularJS from W3C

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html ng-app="">
+<!--    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>-->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.2/angular.min.js"></script>
+    <body>
+        <h3>AngularJS Extends HTML</h3>
+        <p>AngularJS expressions are written inside double braces: <b>{{ expression }}</b>.</p>
+        <p>AngularJS expressions binds data to HTML the same way as the <b>ng-bind</b> directive.</p>
+        <p>AngularJS will "output" data exactly where the expression is written.</p>
+        <p><b>AngularJS expressions</b> are much like <b>JavaScript expressions</b>: They can contain literals, operators, and variables.</p>
+        <div>
+            <p ng-non-bindable>Example expression: {{ 5 + 5 }}</p>
+            <p>result: {{ 5 + 5 }}</p>
+        </div>
+        
+        <br>
+        <br>
+        
+        <h3>AngularJS Numbers</h3>
+        <div ng-init="quantity=1;cost=5">
+            <p>Total in dollar: {{ quantity * cost }}</p>
+        </div>
+        
+        <p>Same example using ng-bind:</p>
+        <div ng-init="quantity=1;cost=5">
+            <p>Total in dollar: <span ng-bind="quantity * cost"></span></p>
+        </div>
+        
+        <br>
+        <br>
+        
+        <h3>AngularJS Strings</h3>
+        <p>AngularJS strings are like JavaScript strings:</p>
+        <div ng-init="firstName='John';lastName='Doe'">
+            <p>The full name is: {{ firstName + " " + lastName }}</p>
+        </div>
+        
+        <p>Same example using ng-bind:</p>
+        <div ng-init="firstName='John';lastName='Doe'">
+            <p>The name is <span ng-bind="firstName + ' ' + lastName"></span></p>
+        </div>
+        
+        <br>
+        <br>
+        
+        <h3>AngularJS Object</h3>
+        <div ng-init="person={firstName:'Tim',lastName:'Hortons'}">
+            <p>The name is {{ person.firstName + " " + person.lastName }}</p>
+        </div>
+        
+        <p>Same example using ng-bind:</p>
+        <div ng-init="person={firstName:'John',lastName:'Doe'}">
+            <p>The name is <span ng-bind="person.lastName"></span></p>
+        </div>
+        
+        <br>
+        <br>
+        
+        <h3>AngularJS Arrays</h3>
+        <div ng-init="points=[1,15,19,2,40]">
+            <p>The third result is {{ points[2] }}</p>
+            <p>the thrid number in the array</p>
+        </div>
+        
+    </body>
+</html>
