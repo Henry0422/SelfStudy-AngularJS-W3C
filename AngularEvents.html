@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.2/angular.min.js"></script>
+    <body>
+        <h3>AngularJS Events</h3>
+        <p>AngularJS has directives for binding application data to the attributes of HTML DOM elements.</p>
+        
+        <div ng-app="myApp" ng-controller="personCtrl">
+
+            <button id="toggleButton" ng-click="toggle()">Hide user</button>
+
+            <p ng-hide="myVar">
+            First Name: <input type=text ng-model="firstName"><br>
+            Last Name: <input type=text ng-model="lastName"><br><br>
+            Full Name: {{firstName + " " + lastName}}
+            </p>
+
+        </div>
+
+        <script>
+            var app = angular.module('myApp', []);
+            app.controller('personCtrl', function($scope) {
+                $scope.firstName = "John",
+                $scope.lastName = "Doe"
+                $scope.myVar = false;
+                $scope.toggle = function() {
+                    $scope.myVar = !$scope.myVar;
+                    var text = $('#toggleButton').text();
+                    if(text=="Hide user"){
+                        $('#toggleButton').empty();
+                        $('#toggleButton').text("Show user");
+                    }
+                    else if(text=="Show user"){
+                        $('#toggleButton').empty();
+                        $('#toggleButton').text("Hide user");
+                    }
+                };
+            });
+        </script> 
+    </body>
+</html>
