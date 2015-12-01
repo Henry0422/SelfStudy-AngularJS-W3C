@@ -6,15 +6,17 @@
         <p>The <b>ng-controller</b> directive defines the application controller.</p>
         <p>AngularJS will invoke the controller with a $scope object.</p>
 
-        
+        <h3>Adding Filters to Expressions</h3>
         <div ng-controller="personCtrl">
-            <p>Lastname in uppercase is : {{ lastName | uppercase }}</p>
+            <p>Lastname in uppercase is : {{firstName | uppercase}} {{ lastName | uppercase }}</p>
         </div>
         
+        <br><br>
         
-        <div ng-app="myApp" ng-controller="costCtrl">
-            <input type="number" ng-model="quantity">
-            <input type="number" ng-model="price">
+        <h3>The currency Filter</h3>
+        <div ng-controller="costCtrl">
+            Quantity: <input type="number" min="0" ng-model="quantity"><br><br>
+            Price per item: <input type="number" min="0" ng-model="price">
 
             <p>Total = {{ (quantity * price) | currency }}</p>
         </div>
@@ -27,8 +29,8 @@
             });
             
             app.controller('costCtrl', function($scope){
-                $scope.quantity="0";
-                $scope.price="0";
+                $scope.quantity = 0;
+                $scope.price = 0;
             });
             
         </script>
