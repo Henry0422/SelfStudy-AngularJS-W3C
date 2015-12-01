@@ -3,7 +3,16 @@
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.2/angular.min.js"></script>
     <body>
         <h3>AngularJS HTTP</h3>
-
+        <p>$http is an AngularJS service for reading data from remote servers.</p>
+        <p>$http.get(url) is the function to use for reading server data.</p>
+        <br>
+        <p>AngularJS will invoke customersCtrl with a $scope and $http object.
+        <p>$scope is the application object (the owner of application variables and functions).</p>
+        <p>$http is an XMLHttpRequest object for requesting external data.</p>
+        <p>$http.get() reads JSON data from http://www.w3schools.com/angular/customers.php.</p>
+        
+        <br><br>
+        <h3>AngularJS $http</h3>
         <div ng-app="myApp" ng-controller="customersCtrl"> 
             <ul>
               <li ng-repeat="x in names">
