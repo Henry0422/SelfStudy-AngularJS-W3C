@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.2/angular.min.js"></script>
+    <body ng-app="">
+        <h3>AngularJS with HTML DOM</h3>
+        <p>AngularJS has directives for binding application data to the attributes of HTML DOM elements.</p>
+        
+        <div ng-init="mySwitch=true">
+            <p>
+            <button ng-disabled="mySwitch">Click Me!</button>
+            </p>
+            <p>
+            <input type="checkbox" ng-model="mySwitch"/>Button
+            </p>
+            <p>
+            {{ mySwitch }}
+            </p>
+        </div>
+        <br><br>
+        <h3>The ng-show Directive</h3>
+        <div>
+            <p ng-show="true">I am visible.</p>
+            <p ng-show="false">I am not visible.</p>
+        </div>
+        
+        <br><br>
+        <h3>The ng-hide Directive</h3>
+        <div>
+            <p ng-hide="true">I am not visible.</p>
+            <p ng-hide="false">I am visible.</p>
+        </div>
+        
+    </body>
+</html>
